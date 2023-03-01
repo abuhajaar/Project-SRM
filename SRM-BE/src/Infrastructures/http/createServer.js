@@ -7,10 +7,8 @@ const DomainErrorTranslator = require('../../Commons/exceptions/DomainErrorTrans
 const users = require('../../Interfaces/http/api/users');
 const authentications = require('../../Interfaces/http/api/authentications');
 const store = require('../../Interfaces/http/api/store');
-<<<<<<< HEAD
+
 const products = require('../../Interfaces/http/api/products');
-=======
->>>>>>> 9017120 (commit)
 
 const createServer = async (container) => {
   const server = Hapi.server({
@@ -66,13 +64,11 @@ const createServer = async (container) => {
       plugin: store,
       options: { container },
     },
-<<<<<<< HEAD
+
     {
       plugin: products,
       options: { container },
     },
-=======
->>>>>>> 9017120 (commit)
   ]);
 
   server.ext('onPreResponse', (request, h) => {
