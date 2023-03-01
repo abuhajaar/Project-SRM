@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import Contact from '../../component/Contact';
-import './HomePage.scss';
-import { GiCheckMark } from 'react-icons/gi';
-
-function HomePage(props) {
-=======
 import React, { useState, useEffect } from 'react';
 import Contact from '../../component/Contact';
 import './HomePage.scss';
@@ -37,18 +29,13 @@ function HomePage() {
         console.log('error: ', err);
       });
   }, []);
->>>>>>> 9017120 (commit)
   return (
     <div className="HomePage">
       <div className="first">
         <h1>
           SELAMAT DATANG DI
           <br />
-<<<<<<< HEAD
-          SAHABAT RIZKY MILIONER
-=======
           SAHABAT {post.nama} MILIONER
->>>>>>> 9017120 (commit)
         </h1>
         <h4>Mitra resmi dari Bisnis BEST CORPORATION</h4>
         <div class="custom-shape-divider-bottom-1676120073">
@@ -76,19 +63,11 @@ function HomePage() {
         </div>
       </div>
       <div className="second">
-<<<<<<< HEAD
-        <Contact nama={props.nama} noHp={props.noHp} />
-        <div>
-          <h4>
-            Assalamualaikum, saya <span> Rizky Firman </span> , Saya adalah
-            mitra Resmi BEST CORPORATION.
-=======
         <Contact nama={post.nama} noHp={post.noHp} />
         <div>
           <h4>
             Assalamualaikum, saya <span> {post.nama} </span> , Saya adalah mitra
             Resmi BEST CORPORATION.
->>>>>>> 9017120 (commit)
             <br />
             <br />
             Silahkan membaca dan mempelajari informasi dalam website ini, selain
@@ -138,11 +117,7 @@ function HomePage() {
               </li>
               <li>
                 <GiCheckMark className="icon-list" />
-<<<<<<< HEAD
                 Ingin solusi lunas hutang dan bebas riba?
-=======
-                Ingin solusi lunas hutang dan bebas riba
->>>>>>> 9017120 (commit)
               </li>
             </ul>
           </div>
@@ -151,8 +126,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
       <div className="fifth">
         <Video />
       </div>
@@ -165,7 +138,6 @@ function HomePage() {
         <Card />
         <Card />
       </div>
->>>>>>> 9017120 (commit)
     </div>
   );
 }

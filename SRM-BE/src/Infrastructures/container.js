@@ -17,16 +17,15 @@ const BcryptPasswordHash = require('./security/BcryptPasswordHash');
 const StoreRepository = require('../Domains/store/StoreRepository');
 const StoreRepositoryPostgres = require('./repository/StoreRepositoryPostgres');
 
-<<<<<<< HEAD
 //service-product
 const ProductRepository = require('../Domains/products/ProductRepository');
 const ProductRepositoryPostgres = require('./repository/ProductRepositoryPostgres');
 
 // use case
 const GetProductsUseCase = require('../Applications/use_case/GetProductsUseCase');
-=======
+
 // use case
->>>>>>> 9017120 (commit)
+
 const GetStoreByIdUseCase = require('../Applications/use_case/GetStoreByIdUseCase');
 const AddUserUseCase = require('../Applications/use_case/AddUserUseCase');
 const AuthenticationTokenManager = require('../Applications/security/AuthenticationTokenManager');
@@ -36,20 +35,16 @@ const AuthenticationRepository = require('../Domains/authentications/Authenticat
 const AuthenticationRepositoryPostgres = require('./repository/AuthenticationRepositoryPostgres');
 const LogoutUserUseCase = require('../Applications/use_case/LogoutUserUseCase');
 const RefreshAuthenticationUseCase = require('../Applications/use_case/RefreshAuthenticationUseCase');
-<<<<<<< HEAD
+
 const GetProductByIdUseCase = require('../Applications/use_case/GetProductByIdUseCase');
-=======
->>>>>>> 9017120 (commit)
 
 // creating container
 const container = createContainer();
 
 // registering services and repository
 container.register([
-<<<<<<< HEAD
   //userRepository
-=======
->>>>>>> 9017120 (commit)
+
   {
     key: UserRepository.name,
     Class: UserRepositoryPostgres,
@@ -64,7 +59,7 @@ container.register([
       ],
     },
   },
-<<<<<<< HEAD
+
   //productRepository
   {
     key: ProductRepository.name,
@@ -80,8 +75,7 @@ container.register([
       ],
     },
   },
-=======
->>>>>>> 9017120 (commit)
+
   {
     key: StoreRepository.name,
     Class: StoreRepositoryPostgres,
@@ -129,7 +123,6 @@ container.register([
       ],
     },
   },
-
 ]);
 
 // registering use cases
@@ -152,7 +145,6 @@ container.register([
     },
   },
   {
-<<<<<<< HEAD
     key: GetProductsUseCase.name, // key  = use case name
     Class: GetProductsUseCase, // Class = use case class
     parameter: {
@@ -174,13 +166,11 @@ container.register([
         {
           name: 'productRepository',
           internal: ProductRepository.name,
-        }
+        },
       ],
     },
   },
   {
-=======
->>>>>>> 9017120 (commit)
     key: GetStoreByIdUseCase.name,
     Class: GetStoreByIdUseCase,
     parameter: {
@@ -248,7 +238,6 @@ container.register([
       ],
     },
   },
-
 ]);
 
 module.exports = container;
