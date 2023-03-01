@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*,
+html {
+  margin: 0;
+}
+.flex {
+  font-size: medium;
+  display: flex;
+  gap: 10px;
+  color: aliceblue;
+
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header {
+  .header-up {
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 200px;
+    height: 50px;
+    background-color: #d00806;
+    .flex-right {
+      display: flex;
+      height: 50px;
+      gap: 20px;
+      color: aliceblue;
+      align-items: center;
+
+      .link {
+        font-size: 20px;
+        color: white;
+        transition: 0.8s ease-in-out;
+
+        &:hover {
+          transform: rotateY(360deg);
+        }
+      }
+    }
+  }
+
+  .header-down {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    padding-inline: 200px;
+    justify-items: center;
+    align-items: center;
+    .menu {
+      display: flex;
+      gap: 10px;
+      .menu1 {
+        color: #d00806;
+        text-decoration: none;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+          color: white;
+          background-color: #d00806;
+        }
+      }
+
+      .menu2 {
+        color: white;
+        background-color: #d00806;
+        border-radius: 15px;
+        text-decoration: none;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.4s;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+
+        &:hover {
+          transform: translateY(-5px);
+          -webkit-transform: translateY(-5px);
+          -moz-transform: translateY(-5px);
+          -ms-transform: translateY(-5px);
+          -o-transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}
+
+.custom-shape-divider-bottom-1676120073 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1676120073 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 61px;
+}
+
+.custom-shape-divider-bottom-1676120073 .shape-fill {
+  fill: #ffffff;
+}
+
+.box {
+  display: inline-block;
+  border-radius: 10px;
+  color: rgb(97, 97, 97);
+  font-size: 1.2em;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 1.2em 1em;
+  line-height: 2;
+  text-align: center;
+
+  .i {
+    color: #d00806;
+  }
+
+  .nama {
+    border-bottom: 1px solid black;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .noHP {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.container {
+  padding: 10px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d00806;
+  font-weight: 600;
+
+  .footer-nav {
+    display: flex;
+    text-decoration: none;
+
+    .nav {
+      padding: 5px 1em;
+
+      a {
+        text-decoration: none;
+        color: grey;
+        font-size: 1.2em;
+        font-weight: 400;
+      }
+    }
+  }
+}
+<<<<<<< HEAD
+=======
+
+.container-video {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.container-card {
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+  .card-image {
+    width: 261px;
+    height: 261px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    text-align: center;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h5 {
+      font-size: 18px;
+      color: gray;
+    }
+  }
+}
+>>>>>>> 9017120 (commit)
