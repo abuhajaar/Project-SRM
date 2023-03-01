@@ -6,10 +6,12 @@ class ProductRepositoryPostgres extends ProductRepository {
         super();
         this._pool = pool;
         this._idGenerator = idGenerator;
+        this.getProducts = this.getProducts.bind(this);
+        this.getProductById = this.getProductById.bind(this);
     }
     async getProductById(productId) {
         const query = {
-            text: 'SELECT nama,foto,harga,desc FROM products WHERE id = $1',
+            text: 'SELECT * FROM products WHERE id = $1',
             values: [productId],
         };
         const { rows, rowCount } = await this._pool.query(query);
@@ -21,14 +23,17 @@ class ProductRepositoryPostgres extends ProductRepository {
     }
     async getProducts() {
         const query = {
-            text: 'SELECT foto,judul,harga FROM products',
+            text: 'SELECT * FROM products',
+            values: [],
         };
         const result = await this._pool.query(query);
+
 
         if (!result.rowCount) {
             return new NotFoundError('Product tidak ditemukan');
         }
-        return result;
+
+        return result.rows;
     }
 }
 

@@ -23,9 +23,6 @@ const ProductRepositoryPostgres = require('./repository/ProductRepositoryPostgre
 
 // use case
 const GetProductsUseCase = require('../Applications/use_case/GetProductsUseCase');
-
-// use case
-
 const GetStoreByIdUseCase = require('../Applications/use_case/GetStoreByIdUseCase');
 const AddUserUseCase = require('../Applications/use_case/AddUserUseCase');
 const AuthenticationTokenManager = require('../Applications/security/AuthenticationTokenManager');
@@ -35,7 +32,6 @@ const AuthenticationRepository = require('../Domains/authentications/Authenticat
 const AuthenticationRepositoryPostgres = require('./repository/AuthenticationRepositoryPostgres');
 const LogoutUserUseCase = require('../Applications/use_case/LogoutUserUseCase');
 const RefreshAuthenticationUseCase = require('../Applications/use_case/RefreshAuthenticationUseCase');
-
 const GetProductByIdUseCase = require('../Applications/use_case/GetProductByIdUseCase');
 
 // creating container
@@ -44,7 +40,6 @@ const container = createContainer();
 // registering services and repository
 container.register([
   //userRepository
-
   {
     key: UserRepository.name,
     Class: UserRepositoryPostgres,
@@ -59,7 +54,6 @@ container.register([
       ],
     },
   },
-
   //productRepository
   {
     key: ProductRepository.name,
@@ -75,7 +69,6 @@ container.register([
       ],
     },
   },
-
   {
     key: StoreRepository.name,
     Class: StoreRepositoryPostgres,
@@ -123,6 +116,7 @@ container.register([
       ],
     },
   },
+
 ]);
 
 // registering use cases
@@ -166,7 +160,7 @@ container.register([
         {
           name: 'productRepository',
           internal: ProductRepository.name,
-        },
+        }
       ],
     },
   },
@@ -238,6 +232,7 @@ container.register([
       ],
     },
   },
+
 ]);
 
 module.exports = container;

@@ -19,17 +19,21 @@ class ProductHandler {
             },
         }).code(200);
     }
-    async getAllProductsHandler(h) {
+    async getAllProductsHandler(request, h) {
         const getProductsUseCase = this._container.getInstance(GetProductsUseCase.name);
-        console.log("masuk getAllProductsHandler")
         const products = await getProductsUseCase.execute();
-        return h.response({
+
+
+        const response = h.response({
             status: 'success',
             data: {
                 products,
             },
-        }).code(200);
+        });
+        response.code(200);
+        return response;
     }
 }
+
 
 module.exports = ProductHandler;

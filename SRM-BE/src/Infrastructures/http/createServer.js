@@ -7,7 +7,6 @@ const DomainErrorTranslator = require('../../Commons/exceptions/DomainErrorTrans
 const users = require('../../Interfaces/http/api/users');
 const authentications = require('../../Interfaces/http/api/authentications');
 const store = require('../../Interfaces/http/api/store');
-
 const products = require('../../Interfaces/http/api/products');
 
 const createServer = async (container) => {
@@ -64,7 +63,6 @@ const createServer = async (container) => {
       plugin: store,
       options: { container },
     },
-
     {
       plugin: products,
       options: { container },

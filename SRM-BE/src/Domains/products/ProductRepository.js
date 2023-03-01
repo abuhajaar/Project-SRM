@@ -1,5 +1,5 @@
 class ProductRepository {
-    async getProductById(storeId) {
+    async getProductById(productId) {
         throw new Error('STORE_REPOSITORY.METHOD_NOT_IMPLEMENTED');
     }
     async getProducts(productId) {
