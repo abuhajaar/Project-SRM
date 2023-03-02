@@ -29,6 +29,8 @@ function HomePage() {
         console.log('error: ', err);
       });
   }, []);
+
+
   return (
     <div className="HomePage">
       <div className="first">
@@ -78,7 +80,7 @@ function HomePage() {
       </div>
       <div className="third">
         <div className="img">
-          <img src="https://sahabatrizkymilioner.com/wp-content/uploads/2023/01/varian-produk.png"></img>
+          <img alt='' src="https://sahabatrizkymilioner.com/wp-content/uploads/2023/01/varian-produk.png"></img>
         </div>
         <div className="details">
           Nikmati Produk-Produk Berkualitas dan Peluang Menjadi distributor
@@ -122,7 +124,7 @@ function HomePage() {
             </ul>
           </div>
           <div className="foto">
-            <img src="https://sahabatrizkymilioner.com/wp-content/uploads/2023/01/DSC00013-copy-min-247x300-1.png"></img>
+            <img src="https://sahabatrizkymilioner.com/wp-content/uploads/2023/01/DSC00013-copy-min-247x300-1.png" ></img>
           </div>
         </div>
       </div>
