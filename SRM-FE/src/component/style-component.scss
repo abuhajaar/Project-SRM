@@ -192,8 +192,7 @@ html {
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
   .card-image {
-    width: 261px;
-    height: 261px;
+    object-fit: cover;
 
     img {
       width: 100%;

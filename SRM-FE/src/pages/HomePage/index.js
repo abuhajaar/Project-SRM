@@ -12,23 +12,36 @@ function HomePage() {
     kota: '',
     noHp: '',
   });
-  const [product, setProduct] = useState({
-    gambar: '',
-    judul: '',
-    harga: '',
-  });
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    Axios.get('http://localhost:5000/stores/001')
+    getStore();
+    getProducts();
+  }, []);
+
+  const getProducts = () => {
+    Axios.get('https://srmapi.mosel.id/products')
       .then((result) => {
-        const responseAPI = result.data.data.store;
-        console.log(responseAPI.id);
-        setPost(responseAPI);
+        const responseAPI = result.data.data.products;
+        setProduct(responseAPI);
+        // console.log(product);
       })
       .catch((err) => {
         console.log('error: ', err);
       });
-  }, []);
+  };
+
+  const getStore = () => {
+    Axios.get('https://srmapi.mosel.id/stores/001')
+      .then((result) => {
+        const responseAPI = result.data.data.store;
+        setPost(responseAPI);
+        // console.log(product);
+      })
+      .catch((err) => {
+        console.log('error: ', err);
+      });
+  };
 
 
   return (
@@ -124,7 +137,7 @@ function HomePage() {
             </ul>
           </div>
           <div className="foto">
-            <img src="https://sahabatrizkymilioner.com/wp-content/uploads/2023/01/DSC00013-copy-min-247x300-1.png" ></img>
+            <img alt='' src="https://sahabatrizkymilioner.com/wp-content/uploads/2023/01/DSC00013-copy-min-247x300-1.png" ></img>
           </div>
         </div>
       </div>
@@ -133,12 +146,9 @@ function HomePage() {
       </div>
 
       <div className="grid">
-        <Card judul={post.nama} />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {product.map((product) => (
+          <Card harga={product.harga} judul={product.nama} foto={product.foto} />
+        ))}
       </div>
     </div>
   );

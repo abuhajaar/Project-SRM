@@ -13,7 +13,7 @@ function App() {
     noHp: '',
   });
   useEffect(() => {
-    Axios.get('http://localhost:5000/stores/001')
+    Axios.get('https://srmapi.mosel.id/stores/001')
       .then((result) => {
         const responseAPI = result.data.data.store;
         console.log(responseAPI.id);
